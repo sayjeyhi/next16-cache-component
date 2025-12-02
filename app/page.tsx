@@ -11,7 +11,7 @@ import { RevalidateButtons } from './components/RevalidateButtons'
 import Link from "next/link";
 import {NotCachedTime} from "@/app/components/NotCachedTime";
 
-function LoadingCard({ color }: { color: string }) {
+export function LoadingCard({ color }: { color: string }) {
   return (
     <div className={`border border-${color}-500 p-4 rounded-lg bg-${color}-50 animate-pulse`}>
       <div className={`h-4 bg-${color}-200 rounded w-3/4 mb-2`}></div>
@@ -82,9 +82,7 @@ export default function Home() {
                   The server layer is cached, but the client component remains interactive.
                 </p>
 
-                <Suspense fallback={<LoadingCard color="orange" />}>
-                  <DonutPattern />
-                </Suspense>
+                <DonutPattern />
               </section>
 
 

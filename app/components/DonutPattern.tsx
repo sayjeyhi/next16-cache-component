@@ -3,6 +3,8 @@
 import { cacheTag } from 'next/cache'
 import { Counter } from './Counter'
 import {fetchUser} from "@/app/components/02-CacheServerAction/bff";
+import {Suspense} from "react";
+import {LoadingCard} from "@/app/page";
 
 
 export async function DonutPattern() {
@@ -26,7 +28,9 @@ export async function DonutPattern() {
         <p className="text-xs text-orange-600 mb-2">
           Client component below is NOT cached:
         </p>
-        <Counter />
+        <Suspense fallback={<LoadingCard color="orange" />}>
+          <Counter />
+        </Suspense>
       </div>
 
       <p className="text-xs text-orange-600 mt-3">
