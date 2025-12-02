@@ -30,6 +30,24 @@ export default function Home() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              Client Component (Not Cached)
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Suspense fallback={<LoadingCard color="purple" />}>
+                <Counter />
+              </Suspense>
+            </div>
+          </section>
+
+          <Link href="/test" className="text-blue-600 underline mb-6 inline-block">
+            Go to Test Page &gt;
+          </Link>
+
+
+
+          <section>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
               Server Components (Not Cached)
             </h2>
 
@@ -37,16 +55,9 @@ export default function Home() {
               <Suspense fallback={<LoadingCard color="blue" />}>
                 <NotCachedTime />
               </Suspense>
-              <Suspense fallback={<LoadingCard color="purple" />}>
-                <Counter />
-              </Suspense>
 
             </div>
           </section>
-
-          <Link href="/test" className="text-blue-600 underline mb-6 inline-block">
-            Go to Test Page &gt;
-          </Link>
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">

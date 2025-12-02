@@ -15,8 +15,8 @@ export async function revalidateUser() {
 
 
 export async function revalidateAll() {
-  revalidateTag('user', 'max')
-  revalidateTag('post', 'max')
+  revalidateTag('time', 'max')
+  revalidateTag('posts', 'max')
   revalidateTag('server-action-user-1', 'max')
   revalidateTag('server-action-user-2', 'max')
   return { success: true, revalidatedAt: new Date().toISOString() }

@@ -1,7 +1,10 @@
+import {cacheTag} from "next/cache";
 
 export async function CachedTime2() {
   'use cache'
+
   const now = new Date().toLocaleString()
+  cacheTag('time')
 
   return (
     <div className="border border-blue-500 p-4 rounded-lg bg-blue-50">

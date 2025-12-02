@@ -1,5 +1,4 @@
-import {sleep} from "@/app/utils";
-
+import { sleep } from "@/app/utils";
 
 export async function NotCachedTime() {
   await sleep(200)
