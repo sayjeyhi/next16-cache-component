@@ -18,8 +18,8 @@ export async function DonutPattern() {
         The outer layer fetches data, inner layer is interactive.
       </p>
 
-      <pre>
-      {JSON.stringify(user)}
+      <pre className="bg-orange-100 p-2 rounded text-xs text-orange-900 overflow-x-auto">
+        {JSON.stringify(user)}
       </pre>
 
       <div className="mt-3 pt-3 border-t border-orange-300">
