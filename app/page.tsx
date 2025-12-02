@@ -26,24 +26,7 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8">
       <div className="max-w-6xl mx-auto">
 
-        <Link href="/test" className="text-blue-600 underline mb-6 inline-block">
-          Go to Test Page
-        </Link>
         <div className="space-y-6">
-          <section>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Server Components (Cached)
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <CachedTime1 />
-              <CachedTime2 />
-              <CacheServerAction1 />
-              <CacheServerAction2 />
-              <CacheServerAction3 />
-              <CacheServerAction4 />
-            </div>
-          </section>
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">
@@ -57,6 +40,27 @@ export default function Home() {
               <Suspense fallback={<LoadingCard color="purple" />}>
                 <Counter />
               </Suspense>
+
+            </div>
+          </section>
+
+          <Link href="/test" className="text-blue-600 underline mb-6 inline-block">
+            Go to Test Page &gt;
+          </Link>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              Server Components (Cached)
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <CachedTime1 />
+              <CachedTime2 />
+              <CacheServerAction1 />
+              <CacheServerAction2 />
+              <CacheServerAction3 />
+              <CacheServerAction4 />
+
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-800 mb-4">
@@ -84,6 +88,7 @@ export default function Home() {
 
                 <RevalidateButtons />
               </section>
+
             </div>
           </section>
 
